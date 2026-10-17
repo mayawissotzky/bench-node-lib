@@ -1,0 +1,43 @@
+{
+  "name": "mdtoc-lite",
+  "version": "1.4.2",
+  "description": "Generate a table of contents for Markdown files",
+  "main": "lib/index.js",
+  "bin": {
+    "mdtoc": "bin/mdtoc.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "scripts/setup.js"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint lib bin",
+    "postinstall": "node scripts/setup.js",
+    "format": "prettier --write lib bin test",
+    "release": "bash scripts/release.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayawissotzky/bench-node-lib.git"
+  },
+  "keywords": [
+    "markdown",
+    "toc",
+    "cli"
+  ],
+  "author": "mayawissotzky",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "github:tj/commander.js#master"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "3.3.3"
+  }
+}
